@@ -1,6 +1,6 @@
 ---
 id: htb-cbbh
-title: Hack The Box : CBBH
+title: Hack The Box - CBBH
 ---
 
 # Hack the Box : Certified Bug Bounty Hunter
