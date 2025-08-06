@@ -1,0 +1,48 @@
+/**
+ * Any CSS included here will be global.
+ *
+ * Such CSS is imported from `src/pages/_app.js`.
+ */
+
+/* Gruvbox dark theme */
+:root {
+  --ifm-color-primary: #fe8019;
+  --ifm-color-primary-dark: #d65d0e;
+  --ifm-color-primary-darker: #b57614;
+  --ifm-color-primary-darkest: #928374;
+  --ifm-color-primary-light: #fabd2f;
+  --ifm-color-primary-lighter: #fbf1c7;
+  --ifm-color-primary-lightest: #ebdbb2;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-background-color: #282828;
+  --ifm-background-surface-color: #3c3836;
+  --ifm-global-border-color: #504945;
+  --ifm-font-color-base: #ebdbb2;
+  --ifm-font-color-secondary: #d5c4a1;
+  --ifm-global-shadow-lw: transparent;
+  --ifm-global-shadow-md: transparent;
+  --ifm-global-shadow-tl: transparent;
+  --ifm-navbar-background-color: #1d2021;
+  --ifm-navbar-shadow: none;
+  --ifm-footer-background-color: #1d2021;
+  --ifm-menu-link-color: #d5c4a1;
+  --ifm-menu-link-color-active: #fe8019;
+  --ifm-toc-border-color: #504945;
+  --ifm-tabs-color: #d5c4a1;
+  --ifm-tabs-color-active: #fe8019;
+  --ifm-tabs-color-active-border: #fe8019;
+  --ifm-link-color: #fabd2f;
+  --ifm-link-hover-color: #fe8019;
+  --ifm-link-hover-decoration: underline;
+  --ifm-heading-color: #fabd2f;
+  --ifm-h1-font-size: 2.5rem;
+  --ifm-h2-font-size: 2rem;
+  --ifm-h3-font-size: 1.75rem;
+  --ifm-h4-font-size: 1.5rem;
+  --ifm-h5-font-size: 1.25rem;
+  --ifm-h6-font-size: 1rem;
+}
