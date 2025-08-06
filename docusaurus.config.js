@@ -11,13 +11,13 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
-const docsPath = path.join(__dirname, './docs');
+const docsPath = path.join(__dirname, './docs/htb-cbbh');
 const docItems = fs.readdirSync(docsPath).map((item) => {
     const id = item.replace(/\.mdx?$/, '');
     return {
         id,
         title: id.replace(/-/g, ' ').split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
-        path: `docs/${id}`
+        path: `docs/htb-cbbh/${id}`
     }
 });
 
@@ -63,8 +63,6 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/ilulale/hackthenotes/tree/main/',
           
         },
         theme: {
@@ -105,7 +103,7 @@ const config = {
       footer: {
         style: 'dark',
         links: [],
-        copyright: `Copyright © ${new Date().getFullYear()} Bug Bounty KB.`,
+        copyright: `Copyright © ${new Date().getFullYear()} hackthenotes. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
