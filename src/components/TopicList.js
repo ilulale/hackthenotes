@@ -1,10 +1,11 @@
 import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 function DocItem({doc}) {
   return (
     <li>
-      <a href={doc.path}>{doc.title}</a>
+      <a href={useBaseUrl(doc.path)}>{doc.title}</a>
     </li>
   );
 }
