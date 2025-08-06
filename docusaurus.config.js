@@ -17,7 +17,7 @@ const docItems = fs.readdirSync(docsPath).map((item) => {
     return {
         id,
         title: id.replace(/-/g, ' ').split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
-        path: `/docs/${id}`
+        path: `docs/${id}`
     }
 });
 
