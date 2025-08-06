@@ -105,7 +105,7 @@ const config = {
       footer: {
         style: 'dark',
         links: [],
-        copyright: `Copyright © ${new Date().getFullYear()} Bug Bounty KB. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Bug Bounty KB.`,
       },
       prism: {
         theme: prismThemes.github,
