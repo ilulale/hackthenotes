@@ -23,7 +23,7 @@ const docItems = fs.readdirSync(docsPath).map((item) => {
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Bug Bounty Knowledge Base',
+  title: 'hackthenotes',
   tagline: 'Your personal knowledge base for bug bounty hunting.',
   favicon: 'img/favicon.ico',
 
@@ -82,9 +82,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Bug Bounty KB',
+        title: 'hackthenotes',
         logo: {
-          alt: 'Bug Bounty KB Logo',
+          alt: 'hackthenotes Logo',
           src: 'img/logo.svg',
         },
         items: [
