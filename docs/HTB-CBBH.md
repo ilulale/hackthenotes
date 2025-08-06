@@ -9,5 +9,6 @@ This space is going to act like a knowledge base for my Hack The Box CBBH exam. 
 - Searchable
 - Atomic
 - Up to date
+
 notes for someone who aims to know more about the CBBH examination.
 
