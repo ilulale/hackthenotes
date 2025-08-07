@@ -15,17 +15,23 @@ const docsPath = path.join(__dirname, './docs');
 
 function getDocItems(dir, base_path) {
     const items = fs.readdirSync(dir);
-    let docItems = [];
+    const docItems = [];
     for (const item of items) {
         const itemPath = path.join(dir, item);
         const stat = fs.statSync(itemPath);
+        const id = item.replace(/\.mdx?$/, '');
+        const title = id.replace(/-/g, ' ').split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+
         if (stat.isDirectory()) {
-            docItems = docItems.concat(getDocItems(itemPath, `${base_path}/${item}`));
-        } else {
-            const id = item.replace(/\.mdx?$/, '');
             docItems.push({
                 id,
-                title: id.replace(/-/g, ' ').split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+                title,
+                children: getDocItems(itemPath, `${base_path}/${item}`)
+            });
+        } else {
+            docItems.push({
+                id,
+                title,
                 path: `${base_path}/${id}`
             });
         }
