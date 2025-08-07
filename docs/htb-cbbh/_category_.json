@@ -1,0 +1,8 @@
+{
+  "label": "HTB CBBH",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "This section covers the Hack The Box Certified Bug Bounty Hunter certification."
+  }
+}
