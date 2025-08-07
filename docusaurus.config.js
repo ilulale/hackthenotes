@@ -19,16 +19,18 @@ function getDocItems(dir, base_path) {
     for (const item of items) {
         const itemPath = path.join(dir, item);
         const stat = fs.statSync(itemPath);
-        const id = item.replace(/\.mdx?$/, '');
-        const title = id.replace(/-/g, ' ').split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
 
         if (stat.isDirectory()) {
+            const id = item.replace(/\.mdx?$/, '');
+            const title = id.replace(/-/g, ' ').split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
             docItems.push({
                 id,
                 title,
                 children: getDocItems(itemPath, `${base_path}/${item}`)
             });
-        } else {
+        } else if (item.endsWith('.md') || item.endsWith('.mdx')) {
+            const id = item.replace(/\.mdx?$/, '');
+            const title = id.replace(/-/g, ' ').split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
             docItems.push({
                 id,
                 title,
