@@ -12,14 +12,27 @@ import {themes as prismThemes} from 'prism-react-renderer';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const docsPath = path.join(__dirname, './docs');
-const docItems = fs.readdirSync(docsPath).map((item) => {
-    const id = item.replace(/\.mdx?$/, '');
-    return {
-        id,
-        title: id.replace(/-/g, ' ').split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
-        path: `docs/${id}`
+
+function getDocItems(dir, base_path) {
+    const items = fs.readdirSync(dir);
+    let docItems = [];
+    for (const item of items) {
+        const itemPath = path.join(dir, item);
+        const stat = fs.statSync(itemPath);
+        if (stat.isDirectory()) {
+            docItems = docItems.concat(getDocItems(itemPath, `${base_path}/${item}`));
+        } else {
+            const id = item.replace(/\.mdx?$/, '');
+            docItems.push({
+                id,
+                title: id.replace(/-/g, ' ').split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+                path: `${base_path}/${id}`
+            });
+        }
     }
-});
+    return docItems;
+}
+const docItems = getDocItems(docsPath, 'docs');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
