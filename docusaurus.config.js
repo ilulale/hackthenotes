@@ -23,7 +23,7 @@ const docItems = fs.readdirSync(docsPath).map((item) => {
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'hackthenotes',
+  title: 'HackTheNotes',
   tagline: 'Your personal knowledge base for bug bounty hunting.',
   favicon: 'img/favicon.ico',
 
@@ -63,8 +63,6 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/ilulale/hackthenotes/tree/main/',
           
         },
         theme: {
@@ -82,9 +80,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'hackthenotes',
+        title: 'HackTheNotes',
         logo: {
-          alt: 'hackthenotes Logo',
+          alt: 'HackTheNotes Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -105,7 +103,7 @@ const config = {
       footer: {
         style: 'dark',
         links: [],
-        copyright: `Copyright © ${new Date().getFullYear()} Bug Bounty KB.`,
+        copyright: `Copyright © ${new Date().getFullYear()} HackTheNotes.`,
       },
       prism: {
         theme: prismThemes.github,
